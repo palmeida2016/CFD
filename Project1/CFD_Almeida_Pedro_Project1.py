@@ -151,4 +151,4 @@ def question1d():
 	s4.question1d()
 
 if __name__ == '__main__':
-	question1d()
+	question1a()
