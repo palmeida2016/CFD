@@ -20,9 +20,16 @@ class Solver:
 		self.midpoint_temp = np.zeros(self.t_end)
 
 		#Define Starting Conditions
-		self.setBoundaryConditions()
+		self.setBoundaryConditions1()
 
-	def setBoundaryConditions(self):
+	def setBoundaryConditions1(self):
+		# Define Initial Conditions
+		self.temperature = self.x * (pi - self.x)
+
+		#Define Boundary Conditions
+		self.temperature[[0,self.n-1]] = 0
+
+	def setBoundaryConditions2(self):
 		# Define Initial Conditions
 		self.temperature = self.x * (pi - self.x)
 
@@ -64,10 +71,10 @@ class Solver:
 
 		# Part 2
 		temp = self.temperature
-		time = self.x
+		x = self.x
 
 		plt.subplot(122)
-		plt.plot(time, temp)
+		plt.plot(x, temp)
 		plt.xlabel('Length x')
 		plt.show()
 
