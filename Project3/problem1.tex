@@ -1,0 +1,54 @@
+\documentclass{article}
+\begin{document}
+ \section{Problem 1}
+\subsection{a}
+If $u>=0$:
+$\frac{\phi^{n+1}-\phi^{n}}{\Delta t} = u\frac{\phi^n_{i} - \phi^n_{i-1}}{\Delta x}$ \newline
+If $u<0$:
+$\frac{\phi^{n+1}-\phi^{n}}{\Delta t} = u\frac{\phi^n_{i+1} - \phi^n_{i}}{\Delta x}$\newline
+\newline
+If $u>=0$: \newline
+\newline
+$\phi^{n+1} =\left(u\frac{\phi^n_{i+1} - \phi^n_{i}}{\Delta x}\right)\Delta t + \phi^{n}$
+\newline
+If $u<0$: \newline
+\newline
+$\phi^{n+1} =\left(u\frac{\phi^n_{i} - \phi^n_{i-1}}{\Delta x}\right)\Delta t + \phi^{n}$
+
+
+\subsection{b}
+Attached video.
+The approximation of the function intially is very accurate, but as time progresses, the deviation between the initial and final profiles becomes more apparent. The reason to the deviation stems from the approximation of the slope using the single-sided upwinding bias method.
+
+\subsection{c}
+For a higher number of points, the accuracy of the approximation greatly increases. The reason for the accuracy increase stems from the discretization of the partial derivate, i.e. points closer together will provide a better approximation for the instantaneous slope.
+
+\subsection{d}
+Attached video.
+
+\subsection{e}
+Attached video.
+
+\subsection{f}
+When running the code with single-sided differences, the model becomes unstable as soon as the velocity changes signs. The instability stems from the discretization's inability to immediately reflect the change in direction at the point of change. When the flow is positive, or moving in the right direction, it should look to it's right for the slope , thus requiring the term $\phi^n_{i+1} - \phi^n_{i}$. The opposite is true when the flow is moving left.
+
+
+\section{Problem 2}
+\subsection{a}
+Given.
+
+\subsection{b}
+Attached video.
+The approximation of the function intially is very accurate, but as time progresses, the deviation between the initial and final profiles becomes more apparent, more accurate than the single-sided method as shown by the model's closer overlay to the initial condition.
+
+\subsection{c}
+For a higher number of points, the accuracy of the approximation greatly increases. The reason for the accuracy increase stems from the discretization of the partial derivate, i.e. points closer together will provide a better approximation for the instantaneous slope. The order of magnitude is a function of the size of $\Delta x^2$.
+
+\subsection{d}
+Attached video.
+
+\subsection{e}
+Attached video.
+
+\end{document}
+

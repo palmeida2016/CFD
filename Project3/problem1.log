@@ -1,0 +1,116 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.29)  20 OCT 2021 16:24
+entering extended mode
+**./problem1.tex
+(problem1.tex
+LaTeX2e <2021-06-01> patch level 1
+L3 programming layer <2021-08-27>
+(/home/palmeida/.miktex/texmfs/install/tex/latex/base/article.cls
+Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
+(/home/palmeida/.miktex/texmfs/install/tex/latex/base/size10.clo
+File: size10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count182
+\c@section=\count183
+\c@subsection=\count184
+\c@subsubsection=\count185
+\c@paragraph=\count186
+\c@subparagraph=\count187
+\c@figure=\count188
+\c@table=\count189
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/home/palmeida/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count190
+\l__pdf_internal_box=\box50
+) (problem1.aux)
+\openout1 = `problem1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--17
+
+ []
+
+
+Overfull \hbox (4.60252pt too wide) in paragraph at lines 24--25
+\OT1/cmr/m/n/10 the partial derivate, i.e. points closer together will provide 
+a better approximation
+ []
+
+
+Overfull \hbox (1.94502pt too wide) in paragraph at lines 33--34
+\OT1/cmr/m/n/10 When running the code with single-sided differences, the model 
+becomes unstable
+ []
+
+
+Overfull \hbox (11.40799pt too wide) in paragraph at lines 33--34
+\OT1/cmr/m/n/10 as soon as the velocity changes signs. The instability stems fr
+om the discretization's
+ []
+
+[1
+
+{/home/palmeida/.miktex/texmfs/data/pdftex/config/pdftex.map}]
+Overfull \hbox (4.60252pt too wide) in paragraph at lines 45--46
+\OT1/cmr/m/n/10 the partial derivate, i.e. points closer together will provide 
+a better approximation
+ []
+
+[2] (problem1.aux) ) 
+Here is how much of TeX's memory you used:
+ 397 strings out of 480864
+ 7240 string characters out of 2904105
+ 299144 words of memory out of 3000000
+ 18095 multiletter control sequences out of 15000+600000
+ 404640 words of font info for 31 fonts, out of 8000000 for 9000
+ 0 hyphenation exceptions out of 8191
+ 34i,5n,41p,493b,109s stack positions out of 5000i,500n,10000p,200000b,80000s
+</home/palmeida/.miktex/texmfs/install/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb></home/palmeida/.miktex/texmfs/install/fonts/type1/public
+/amsfonts/cm/cmex10.pfb></home/palmeida/.miktex/texmfs/install/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb></home/palmeida/.miktex/texmfs/install/fonts/type1/pu
+blic/amsfonts/cm/cmmi5.pfb></home/palmeida/.miktex/texmfs/install/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb></home/palmeida/.miktex/texmfs/install/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></home/palmeida/.miktex/texmfs/install/fonts/type1
+/public/amsfonts/cm/cmr5.pfb></home/palmeida/.miktex/texmfs/install/fonts/type1
+/public/amsfonts/cm/cmr7.pfb></home/palmeida/.miktex/texmfs/install/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></home/palmeida/.miktex/texmfs/install/fonts/typ
+e1/public/amsfonts/cm/cmsy5.pfb></home/palmeida/.miktex/texmfs/install/fonts/ty
+pe1/public/amsfonts/cm/cmsy7.pfb>
+Output written on problem1.pdf (2 pages, 115209 bytes).
+PDF statistics:
+ 64 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

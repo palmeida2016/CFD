@@ -9,7 +9,6 @@ n = 100;
 L = pi;
 dx = pi/n;
 x = 0:dx:L;
-dt = 1e-2;
 
 % Time
 dt = 1e-2;
