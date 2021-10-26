@@ -39,8 +39,8 @@ for i = 1:length(t)
         name = sprintf('t=%2.2f',i*dt);
         plot(x, phi(1,2:end-1),x,phi(i,2:end-1));
         legend('Original', name);
-        saveas(gcf, path)
-        pause(0.1);
+%         saveas(gcf, path)
+        pause(0.02);
     end
 end
 
