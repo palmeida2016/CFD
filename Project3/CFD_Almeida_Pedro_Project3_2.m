@@ -27,11 +27,13 @@ for i = 1:length(t)
     u = 2*sin(2*pi*(i*dt));
     if u >= 0
         phi(i+1, 3:end-2) = (u*(-3*phi(i, 3:end-2) + 4*phi(i, 4:end-1) - phi(i, 5:end))/(2*dx))*dt + phi(i, 3:end-2);
+%         phi(i+1, 3:end-2) = (u*(3*phi(i, 3:end-2) - 4*phi(i, 2:end-3) + phi(i, 1:end-4))/(2*dx))*dt + phi(i, 3:end-2);
     else
+%         phi(i+1, 3:end-2) = (u*(-3*phi(i, 3:end-2) + 4*phi(i, 4:end-1) - phi(i, 5:end))/(2*dx))*dt + phi(i, 3:end-2);
         phi(i+1, 3:end-2) = (u*(3*phi(i, 3:end-2) - 4*phi(i, 2:end-3) + phi(i, 1:end-4))/(2*dx))*dt + phi(i, 3:end-2);
     end
-phi(i+1, 1:2) = phi(i, end-3:end-2);
-phi(i+1, end-1:end) = phi(i, 3:4);
+phi(i+1, 1:2) = phi(i+1, end-3:end-2);
+phi(i+1, end-1:end) = phi(i+1, 3:4);
 
     if mod(i,500) == 0
         path = sprintf('%03d.png', j);
