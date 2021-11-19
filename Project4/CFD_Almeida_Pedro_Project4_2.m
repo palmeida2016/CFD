@@ -4,14 +4,14 @@ clear; close all; clc;
 %% Problem 1
 % Analytical solution
 
-dt = 1e-2;
+dt = 1e-3;
 t_end = 10;
 t = 0:dt:t_end;
 Nt = length(t);
 Lx = 2*pi;
 Ly = 2*pi;
-Nx = 101;
-Ny = 101;
+Nx = 31;
+Ny = 31;
 dx = Lx/Nx;
 dy = Ly/Ny;
 
@@ -22,8 +22,8 @@ y = linspace(0,Ly,Ny);
 [X,Y] = meshgrid(x,y);
 
 % Define Velocity Components
-u = cos(x).*sin(y');
-v = -sin(x).*cos(y');
+u = zeros(Nx,Ny,Nt);
+v = zeros(Nx,Ny,Nt);
 
 % Initialize phi
 phi = zeros(Nx+4,Ny+4,Nt);
@@ -56,6 +56,22 @@ v_min(v_min >= 0) = 0;
 j=1;
 % Time Step
 for i = 1:Nt-1
+    % Get Velocity Components
+    u(:,:,i) = sin(2*pi*(i*dt)/t_end) *cos(x).*sin(y');
+    v(:,:,i) = -sin(2*pi*(i*dt)/t_end) *sin(x).*cos(y');
+    
+    u_max = u(:,:,i);
+    u_max(u_max < 0) = 0;
+
+    u_min = u(:,:,i);
+    u_min(u_min >= 0) = 0;
+
+    v_max = v(:,:,i);
+    v_max(v_max < 0) = 0;
+
+    v_min = v(:,:,i);
+    v_min(v_min >= 0) = 0;
+    
     
     % x Advection Calculation
     adv_i_pos = (u_max.*(-3*phi(3:Ny+2, 3:Nx+2, i) + 4*phi(3:Ny+2, 2:Nx+1, i) - phi(3:Ny+2, 1:Nx, i))) / (2*dx);
@@ -76,12 +92,12 @@ for i = 1:Nt-1
     phi(3:Nx+2, [1 2 Ny+3 Ny+4], i+1) = phi(3:Nx+2, [Ny+1 Ny+2  3 4], i+1);
     phi([1 2 Nx+3 Nx+4], 3:Ny+2, i+1) = phi([Nx+1 Nx+2 3 4], 3:Ny+2, i+1);
 
-    if mod(i,25) == 0
+    if mod(i,250) == 0
         disp(i)
         clf;
         hold on;
         contourf(X,Y,phi(3:Nx+2,3:Ny+2,i));
-%         quiver(x,y,u,v);
+        quiver(x,y,u(:,:,i),v(:,:,i));
         hold off;
         path = sprintf('%03d.png', j);
         j = j+1;
