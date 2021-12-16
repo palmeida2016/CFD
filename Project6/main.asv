@@ -34,8 +34,6 @@ v = zeros(Nx,Ny); % Vertical Velocity
 P = zeros(Nx,Ny); % Pressure
 wall = createWallVisualizer(u); % Get Wall to Plot
 
-
-
 % Solve for each Reynolds Number Differently
 for i = 1:1 % CHANGE TO length(Re)
     % Initialize Velocity Given Reynolds Number
@@ -43,20 +41,17 @@ for i = 1:1 % CHANGE TO length(Re)
 
     % Iterate Each Timestep
     for t = 0:dt:t_max
-        disp(u)
-
-        % Diffusion Term
+        % Diffusion
         [u,v] = diffusion(u,v,dx,dy,nu,dt);
     
-        % Advection Term
+        % Advection
         [u,v] = advection(u,v,dx,dy,dt);
-        
-        % Pressure Term
-        [u,v] = pressure(P,u,v,dx,dy,rho);
 
         % Plot
-%         figure(i);
-        
+        figure(i);
+        if 
+            
+        end
     end
 end
 
